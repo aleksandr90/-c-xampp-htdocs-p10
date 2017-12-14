@@ -1,0 +1,155 @@
+body{
+    font-family: 'roboto' sans-serif;
+    text-align: center;
+}
+
+.container{
+    width: 90%;
+    margin: auto;
+    max-width: 900px;
+}
+
+.clearfix:after{
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.price-plan{
+    width: 90%;
+    margin: auto;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.price{
+    width: 30%;
+    border: 1px solid black;
+    min-height: 200px;
+    border-radius:10px;
+    box-shadow: 0 0 10px;
+}
+h2{
+    font-size: 30px;
+    line-height: 2;
+}
+
+li{
+    height: 20px;
+    line-height: 1.6;
+}
+
+.left li:before{
+    content:'$';
+    margin-right: 5px;
+    font-weight: 600;
+    color:green;
+}
+.left li:after{
+    content:'-  sale';
+    color:orange;
+    margin-left:5px;
+}
+.center li{
+   text-align: left;
+    margin-left: 20px;
+}
+.center li:before{
+    display: inline-block; /*display: inline-block; potomu sto :before i :after ne blockovije a strochnije elementi*/
+    margin-right: 5px;
+    content: ''; /* vsegda dolzhen bit' content: '';*/
+    height: 10px;
+    width: 10px;
+    background: green;
+    
+}
+.right li{
+    text-align: left;
+    margin-right: 20px;
+}
+.right li:before{  /* vazhnij moment*/
+    content: '\f206';
+    font-family:'fontAwesome';
+    float:left;
+    color:red;
+    margin-left: 20px;
+}
+.right li:after{
+    content: '';
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    background-image: url(../images/price.png);
+    background-size: cover;
+    float: right;
+}
+.price{
+    cursor: pointer;
+}
+.price:active{
+    background: red;
+}
+
+.order{
+    display: inline-block;
+    font-size: 22px;
+    padding: 5px 20px;
+    margin-top: 50px;
+    border: 1px solid black;
+    border-radius: 10px;
+    cursor: pointer;
+    user-select: none;
+    transition: 0.15s;
+    box-shadow: 1px 1px 5px grey;
+    
+    position: relative;
+    background: white;
+}
+.order:after{
+    content: '';
+    position: absolute;
+    top: 16px;
+    right: -50%;
+    z-index: -1;
+    width: 200%;
+    border-bottom: 2px solid grey;
+}
+.order:hover{
+    box-shadow: 5px 5px 15px grey;
+}
+.order:active{
+    box-shadow: 3px 3px 10px grey;
+    transform: translateY(1px);
+}
+
+.article{
+    width: 90%;
+    margin: auto;
+    margin-top: 50px;
+}
+.article p{
+    font-size: 18px;
+    line-height: 1.3;
+    text-align: left;
+    padding: 10px 10px;
+    cursor: url(../images/cursor.png), auto;
+
+}
+.article p:first-child{
+    text-transform: uppercase;
+}
+.article p:last-child{
+    color: violet;
+}
+
+.article p:nth-child(4){
+    font-weight: 600;
+}
+.article p:nth-child(2n+1){
+    background: #555;
+}
+
+.article p:nth-child(2n+2){
+    background: #ddd;
+}
